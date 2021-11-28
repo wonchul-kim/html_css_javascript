@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <meta charset='utf-8'>
+    <head>
+
+    </head>
+        <h1>EVENT</h1>
+        <input type='button' value='hi' onclick="alert('hi')">
+        <input type="text" onchange="alert('changed')">
+        <script>
+            document.write("hello world")
+        </script>
+
+        <div>
+            --------------------------------------------------------------------
+        </div>
+        <h1>ARRAY</h1>
+        <h2>Syntax</h2>
+            <script>
+                var coworkers = ["egoing", "leezche"];
+            </script>
+
+        <h2>get</h2>
+            <script>
+                document.write(coworkers[0]);
+                document.write(coworkers[1]);
+            </script>
+        <h2>count</h2>
+            <script>
+                document.write(coworkers.length);
+            </script>
+        <h2>add</h2>
+            <script>
+                coworkers.push('duru');
+            </script>
+        <h2>count</h2>
+            <script>
+                document.write(coworkers.length);
+            </script>
+
+        <div>
+            --------------------------------------------------------------------
+        </div>
+        <h1>LOOP</h1>
+        <ul>
+            <script>
+                document.write("start");
+                var coworkers_ = ['aaa', 'bbb', 'ccc', 'ddd']
+                idx = 0
+                while(idx < coworkers_.length) {
+                    document.write('<li>' + coworkers_[idx] + '</li>');
+                    idx = idx + 1;
+                }
+                document.write("end....!")
+            </script>
+        </ul>
+
+        <div>
+            --------------------------------------------------------------------
+        </div>
+        <h1>FUNCTION</h1>
+
+        <h2> Basic</h2>
+
+        <h2> Parameter & Argument</h2>
+
+        <h2> Return </h2>
+
+
+        <div>
+            --------------------------------------------------------------------
+        </div>
+        <h1>OBJECT</h1>
+
+        <h2> create</h2>
+            <script>
+                var coworkers = {
+                    "programmer": "egoing",
+                    "designer": "lee"
+                }
+
+                document.write("Programmer is " + coworkers.programmer + "<br>");
+                document.write("designer is " + coworkers.designer + "<br>");
+                coworkers.bookkeeper = 'kim';
+                document.write("Bookkeeper is " + coworkers.bookkeeper + "<br>");
+                coworkers["Data scientist"] = "taeho";
+                document.write("Data scientist is " + coworkers["Data scientist"] + "<br>");
+            </script>
+        
+        <h2> interate </h2>
+            <script>
+                for(var key in coworkers) {
+                    document.write(key + ' is ' + coworkers[key] + "<br>");
+                }
+            </script>
+
+        <h2> Property & Method </h2>
+            <script>
+                coworkers.showAll = function (){
+                    for(var key in this) {
+                        document.write(key + ': ' + this[key] + '<br>')
+                    }
+                }
+                coworkers.showAll();
+            </script>
+    <body>
+
+    </body>
+</html>

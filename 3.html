@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB1 - html</title>
+    <meta charset='utf-8'>
+    <script>
+        function setColor(color) {
+            var alist = document.querySelectorAll('a');
+            var idx = 0;
+            while(idx < alist.length) {
+                alist[idx].style.color = color;
+                idx = idx + 1;
+            }
+        }
+
+        function nightDayHandler(self) {
+            var target=document.querySelector('body');
+            if(self.value==='toggle_night') 
+            {
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                self.value = 'toggle_day'
+
+                setColor('powderblue');
+            } else {
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                self.value = 'toggle_night'  
+                
+                setColor('blue');
+            }
+        }
+
+        var Body = {
+            setColor: function (color) {
+                document.querySelector('body').style.color=color;
+            },
+            setBackgroundColor: function (color) {
+                document.querySelector('body').style.backgroundColor=color;
+            }
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1><a href='index.html'>WEB</a></h1>
+    <input type="button" value="night" onclick="
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
+    ">
+    <input type="button" value="day" onclick="
+            Body.setBackgroundColor('white');
+            Body.setColor('black');
+    ">
+    <input id='toggle_night_day' type="button" value="toggle night" onclick="
+        if(document.querySelector('#toggle_night_day').value==='toggle_night') 
+        {
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
+            document.querySelector('#toggle_night_day').value = 'toggle_day'
+
+            setColor('powderblue');
+            
+
+        } else {
+            Body.setBackgroundColor('white');
+            Body.setColor('black');
+            document.querySelector('#toggle_night_day').value = 'toggle_night'   
+            
+            setColor('blue');
+        }
+    ">
+    <ol>
+        <li><a href='1.html'>HTML</a></li>
+        <li><a href='2.html'>CSS</a></li>
+        <li><a href='3.html'>JavaScript</a></li>
+    </ol>
+
+    <h2>JavaScript</h2>
+
+    <p>
+        자바스크립트(영어: JavaScript)는 객체 기반의 스크립트 프로그래밍 언어이다. 
+        이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 
+        가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다. 
+    </p>
+
+    <input id='toggle_night_day' type="button" value="toggle night" onclick="
+        nightDayHandler(this);
+    ">
+</body>
+
+</html>
