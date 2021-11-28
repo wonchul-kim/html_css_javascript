@@ -190,3 +190,13 @@
 ## references
 * [생활코딩 > - WEB1 - HTML&Internet](https://opentutorials.org/module/3135/18437)
 * [w3schools](https://www.w3schools.com/)
+
+* Extra to do:
+    * document
+    * Document Object Model (DOM)
+    * ajax: 웹페이지를 리로드하지 않고 정보를 변경하고자 할 때
+    * cookie: 웹페이지가 리로드되더라고 현재 상태를 유지하고 싶을 때, 사용자에 대한 개인화된 서비스 제공을 하고 싶을 때 
+    * offline web application: 
+    * webRTC: 가상통신 웹앱을 만들고 싶을 때
+    * webGL: 3차원
+    * webVR
